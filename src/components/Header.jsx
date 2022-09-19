@@ -1,9 +1,32 @@
 import React from 'react'
-import {GiHamburgerMenu} from 'react-icons/gi'
+import {FiMenu} from 'react-icons/fi'
+import {GrFormClose} from 'react-icons/gr'
+import {logo} from '../assets/index'
+import { navLinks } from '../constants'
+import { useStateContext } from '../context/ContextApp'
+import {GetStarted} from './index'
 
 const Header = () => {
+
+  const {sidebar, setSidebar} = useStateContext();
+
   return (
-    <div>Header</div>
+    <div className='flex justify-between items-center py-7 text-[14px] sticky z-[4] top-0 bg-lightGray'>
+      <img src={logo} alt="Manage Logo" />
+      <ul className='sm:flex gap-5 hidden'>
+        {navLinks.map(link => (
+          <li key={link.id}>
+            <a href="#" className='text-secondary font-medium transition-all hover:text-gray'>
+              {link.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <GetStarted text="Get Started" customStyle="sm:block hidden"/>
+      <button className='sm:hidden block text-[40px] -translate-y-1 relative z-[4] cursor-pointer' onClick={() => setSidebar(prev => !prev)}>
+        {!sidebar ? <FiMenu /> : <GrFormClose />}
+      </button>
+    </div>
   )
 }
 

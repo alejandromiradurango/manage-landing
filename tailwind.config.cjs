@@ -4,6 +4,9 @@ module.exports = {
   mode: 'jit',
   theme: {
     extend: {
+      backgroundImage: {
+        'desktop': "url('/src/assets/bg-simplify-section-desktop.svg')"
+      },
       colors: {
         primary: '#f25f3a',
         secondary: '#242d52',
