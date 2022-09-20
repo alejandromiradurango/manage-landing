@@ -1,5 +1,6 @@
 import {AiFillFacebook, AiFillYoutube, AiOutlineTwitter, AiFillInstagram} from 'react-icons/ai';
 import {BsPinterest} from 'react-icons/bs';
+import { anishaImg, aliImg, richardImg, shanaiImg } from '../assets';
 
 export const navLinks = [
     {
@@ -45,31 +46,31 @@ export const features = [
 export const testimonials = [
     {
         id:1,
-        profile:'',
+        profile:anishaImg,
         name:'Anisha Li',
         opinion:'Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.'
     },
     {
         id:2,
-        profile:'',
+        profile:aliImg,
         name:'Ali Bravo',
         opinion:'We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.'
     },
     {
         id:3,
-        profile:'',
+        profile:richardImg,
         name:'Richard Watts',
         opinion:'Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!'
     },
     {
         id:4,
-        profile:'',
+        profile:shanaiImg,
         name:'Shanai Gough',
         opinion:'Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.'
     }
 ];
 
-export const LinksFooter = [
+export const socialLinks = [
     {
       id:'facebook',
       icon: <AiFillFacebook />

@@ -11,7 +11,7 @@ const Header = () => {
   const {sidebar, setSidebar} = useStateContext();
 
   return (
-    <div className='flex justify-between items-center py-7 text-[14px] sticky z-[4] top-0 bg-lightGray'>
+    <div className='md:max-w-[1200px] xl:max-w-[1440px] m-auto px-5 flex justify-between items-center py-5 sm:py-7 text-[14px] '>
       <img src={logo} alt="Manage Logo" />
       <ul className='sm:flex gap-5 hidden'>
         {navLinks.map(link => (
